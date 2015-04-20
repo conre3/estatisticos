@@ -1,0 +1,237 @@
+---
+title: "Estatisticos do IME que nao estao no Conre-3"
+author: "Julio Trecenti"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Estatisticos do IME que nao estao no Conre3}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+library(estatisticos)
+library(httr)
+library(rvest)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+
+errados <- c('ANACRISTINA GIGLI',
+         'ANDERSON REZENDE FRANCO',
+         'ANDRE VENCIGUERRI ANNUNCIATO',
+         'ANELISE SABBAG',
+         'BRUNO MEDEIROS GARIBALDI PEREIRA',
+         'CESAR AUGUSTO CASTALDI',
+         'CLAUDIA MONTERIO PEIXOTO',
+         'DALTO SANTOS PINHEIRO',
+         'DAVI KOBAYASHI',
+         'EDLAYNE TEIXEIRA AQUINO',
+         'ERIC YUJI SAKAMOTO',
+         'FERNANDA KMOHAN PAULINO',
+         'FLAVIO APARECIDO MORAES',
+         'GABRIEL RIBEIRO PEIXOTO',
+         'GABRIELA C M DE SA',
+         'GISELA TUNES ADA SILVA',
+         'GUILHERME HOMSY',
+         'JACQUELINE SANTEUFEMIA DAVID',
+         'JEFFERSON FEREIRA',
+         'JOAO PAULO ZANOLA CUNHA',
+         'JOAO VINICIUS FRANCA CARVALHO',
+         'JOSE RISOMAR FONTES DE SOUSA',
+         'JULIA MARIA P SOLER',
+         'JULIANE ANDRADE',
+         'JULIO M SINGER',
+         'KARINA PAULA SANTOS SILVA',
+         'LAIS LOPES DE MELO',
+         'LIVIA M DE A PERANCINI',
+         'LUIS G ESTEVES',
+         'MARCIA D ELIA BRANCO',
+         'MARCIO EDURADO BEZERRA MACIEL',
+         'MARTHA E BLANCO',
+         'MICHELLE MISSAE KATO',
+         'RAFAEL DE SOUZA TAVARES CUNHA',
+         'RAFAEL RIBERIO DOS SANTOS',
+         'REJANE A FIGUEIREDO',
+         'ROBERTA IRIE SUMI',
+         'SILVA',
+         'TALITA CARVALHO DA MOTA',
+         'TARSILA ARAUJO PEREIRA',
+         'TATIANA SALOMAO MIOAMOTO',
+         'VANESSA Y HUANG',
+         'LOUISSE ROSSI RASTEIRO')
+
+profs <- c('CHANG CHIANN',
+           'CLELIA MARIA DE CASTRO TOLOI',
+           'GILBERTO ALVARENGA PAULA',
+           'LUCIA PEREIRA BARROSO',
+           'MONICA CARNEIRO SANDOVAL',
+           'ELISETE DA C QUINTANEIRO AUBIN',
+           'VICTOR FOSSALUZA',
+           'DENISE APARECIDA BOTTER',
+           'ELISETE DA CONCEICAO QUINTANEIRO AUBIN',
+           'CARLOS ALBERTO DE BRAGANCA PEREIRA',
+           'SILVIA LOPES DE PAULA FERRARI',
+           'RINALDO ARTES',
+           'SILVIA NAGIB ELIAN',
+           'PEDRO A MORETTIN',
+           'PEDRO ALBERTO MORETTIN',
+           'MONICA C SANDOVAL',
+           'SILVIA N ELIAN',
+           'DENISE A BOTTER',
+           'MARCELO L DE ARRUDA',
+           'SILVIA L DE P FERRARI',
+           'CLAUDIA MONTEIRO PEIXOTO',
+           'JULIA MARIA PAVAN SOLER',
+           'LUIS GUSTAVO ESTEVES',
+           'VIVIANA GIAMPAOLI',
+           'ELISABETI KIRA',
+           'GISELA TUNES DA SILVA',
+           'SERGIO WECHSLER',
+           'ANTONIO CARLOS PEDROSO DE LIMA',
+           'AIRLANE PEREIRA ALENCAR',
+           'FLORENCIA GRACIELA LEONARDI',
+           'HELENO BOLFARINE',
+           'VLADIMIR BELITSKY')
+
+sai <- c('ADRIANA ELAINE DA SILVA',
+         'EDILENE FREIRE N GOMES',
+         'DENISE A BOTTER',
+         'ELISETE DA C QUINTANEIRO AUBIN',
+         'LUCIANA ISHIHARA',
+         'MARCELO L DE ARRUDA',
+         'MARIANA GUERREIRO NOGUEIRA DE MELO',
+         'MONICA C SANDOVAL',
+         'PAULO TMS DE OLIVEIRA',
+         'PEDRO A MORETTIN',
+         'SERGIO R MARTINS',
+         'SILVIA L DE P FERRARI',
+         'SILVIA N ELIAN',
+         'EDILENE FREIRE N GOMES',
+         'SERGIO R MARTINS',
+         'PAULO TMS DE OLIVEIRA')
+
+
+```
+
+### Formandos por ano e proporçao desses formandos que se cadastraram no Conre
+
+```{r fig.width=8, fig.height=4, echo=FALSE}
+prop_ano_cea <- nomes_cea %>%
+  mutate(fl = ifelse(str_detect(fl, 'VICTOR VERZANI'), 'VICTOR SOUZA', fl)) %>%
+  filter(!nome_cea %in% errados, !nome_cea %in% sai, !nome_cea %in% profs) %>%
+  left_join(nomes, 'fl') %>%
+  group_by(ano) %>%
+  summarise(n_formados = n(), n_conre = sum(!is.na(nome))) %>%
+  arrange(desc(ano)) %>%
+  mutate(porc = n_conre/n_formados, `  %` = scales::percent(porc))
+
+knitr::kable(select(prop_ano_cea, -porc))
+
+prop_ano_cea %>%
+  mutate(ano = as.numeric(ano)) %>%
+  ggplot(aes(x = ano, y = porc)) +
+  geom_line() +
+  geom_point(size = 5, alpha = .4) +
+  theme_bw() +
+  ggtitle('Proporçao de alunos formados do IME que \nse cadastram no Conre-3 por ano de formatura') +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_continuous(breaks = 1900:2050) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(aes(label = n_formados, y = .45)) 
+```
+
+
+### Nomes SEM match (Obs: anos para professores nao fazem sentido)
+
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+# nomes <- pega_nomes()
+# d_google <- get_google(abjutils::rm_accent(nomes), 'inst/extdata/')
+# a <- list.files('inst/extdata/', full.names = TRUE)[15]
+# a %>%
+#   html %>%
+#   html_node('#res') %>%
+#   html_text
+
+# nomes_cea <- pega_cea()
+# dim(nomes_cea)
+# View(nomes_cea)
+
+# nomes_cea_fl <- tbl_df(nomes_cea) %>%
+#   mutate(nome = str_trim(gsub('[^A-Z ]', '', abjutils::rm_accent(toupper(nome)))), 
+#          fl = primeiro_ultimo(nome)) %>%
+#   mutate(nome = ifelse(nome == 'MARIANA GUERREIRO NOGUEIRA DE MELO', 
+#                        'MARIANA GUERREIRO NOGUEIRA DEMELO', nome),
+#          nome = ifelse(nome == 'LOUISSE ROSSI RASTEIRO', 
+#                        'LOUISE ROSSI RASTEIRO', nome)) %>%
+#   distinct(fl) %>%
+#   select(-link, nome_cea = nome, fl)
+# nomes_cea_fl %>%
+#   left_join(nomes_fl, 'fl') %>%
+#   filter(!is.na(nome), nome_cea != nome) %>%
+#   View
+# c('MARIANA GUERREIRO NOGUEIRA DE MELO', 
+#   'ADRIANA ELAINE DA SILVA', 
+#   'DALTO SANTOS PINHEIRO', 
+#   'LOUISSE ROSSI RASTEIRO')
+# nomes_cea_fl %>%
+#   left_join(nomes_fl, 'fl') %>%
+#   filter(is.na(nome)) %>%
+#   mutate(lastn = sapply(fl, function(x) {strsplit(x, ' ')[[1]][2]})) %>%
+#   select(nome_cea, lastn) %>%
+#   left_join(nomes_fl, 'lastn') %>%
+#   filter(!is.na(nome)) %>%
+#   arrange(lastn) %>%
+#   View
+# nomes_cea_fl %>%
+#   left_join(nomes_fl, 'fl') %>%
+#   filter(is.na(nome)) %>%
+#   mutate(firstn = sapply(fl, function(x) {strsplit(x, ' ')[[1]][1]})) %>%
+#   select(nome_cea, firstn) %>%
+#   left_join(nomes_fl, 'firstn') %>%
+#   filter(!is.na(nome)) %>%
+#   arrange(firstn) %>%
+#   View('1')
+
+
+
+nomes_cea_nconre <- nomes_cea %>%
+  filter(!nome_cea %in% errados, !nome_cea %in% profs) %>%
+  mutate(fl = ifelse(str_detect(fl, 'VICTOR VERZANI'), 'VICTOR SOUZA', fl)) %>%
+  anti_join(nomes, 'fl') %>%
+  arrange(nome_cea) %>%
+  left_join(nomes, 'primeiro') %>%
+  group_by(nome_cea) %>%
+  summarise(nomes_parecidos = paste(nome, collapse = ';'), ano = first(ano)) %>%
+  select(ano, nome_cea, nomes_parecidos) %>%
+  arrange(desc(ano), nome_cea) %>%
+  add_rownames('id')
+
+knitr::kable(select(nomes_cea_nconre, id, ano, nome_cea))
+```
+
+### Nomes COM match (Obs: anos para professores nao fazem sentido)
+
+```{r echo=FALSE}
+nomes_cea_conre <- nomes_cea %>%
+  mutate(fl = ifelse(str_detect(fl, 'VICTOR VERZANI'), 'VICTOR SOUZA', fl)) %>%
+  filter(!nome_cea %in% sai, !nome_cea %in% profs) %>%
+  semi_join(nomes, 'fl') %>%
+  arrange(nome_cea) %>%
+  select(ano, nome_cea, fl) %>%
+  arrange(desc(ano), nome_cea) %>%
+  add_rownames('id')
+
+knitr::kable(nomes_cea_conre)
+
+# nomes_cea_conre <- nomes_cea %>%
+#   mutate(fl = ifelse(str_detect(fl, 'VICTOR VERZANI'), 'VICTOR SOUZA', fl)) %>%
+#   filter(!str_detect(nome_cea, paste(sai, collapse = '|'))) %>%
+#   semi_join(nomes, 'fl') %>%
+#   arrange(nome_cea) %>%
+#   select(nome_cea, fl) %>%
+#   add_rownames('id')
+# 
+# knitr::kable(nomes_cea_conre)
+```
