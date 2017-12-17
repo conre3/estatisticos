@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>ESTATÍSTICA NO BRASIL</name>
+    <description><![CDATA[Onde estudar estatística no Brasil<br>- Guia de cores:<br>Azul: Bacharelado<br>Rosa: Bacharelado+Mestrado<br>Verde: Bacharelado+Mestrado+Doutorado<br>Vermelho: (sem bacharelado) Mestrado+Doutorado<br>Amarelo: (sem bacharelado) Mestrado e/ou cursos de serviço<br><br>MAIS INFORMAÇÕES: <br>http://www.conre3.org.br/portal/instituicoes-de-ensino/<br>.<br>]]></description>
+    <Style id="icon-102-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/102-pink.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-102-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/102-pink.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-102">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-102-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-102-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-124-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/124-red.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-124-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/124-red.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-124">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-124-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-124-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-158-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/158-yellow.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-158-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/158-yellow.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-158">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-158-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-158-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-24-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/24-blue.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-24-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/24-blue.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-24">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-24-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-24-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-62-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/62-green.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-62-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/62-green.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-62">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-62-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-62-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>IME-DE-USP</name>
+        <description><![CDATA[http://www.ime.usp.br/mae<br>USP-Universidade de São Paulo<br>IME-Instituto de Matemática e Estatística - Depto de EstatísticaRua do Matão, 1010 - Cidade Universitária - São Paulo - SP - Brasil - CEP 05508-090<br>Caixa Postal 66281 - CEP 05314-970 - Cidade Universitária - Butantã - São Paulo - SP<br><br><br>(Bacharelado+Mestrado+Doutorado)<br><br>Bacharelado<br>email: secmae@ime.usp.br<br>fone: 11 3091-6129<br>DIURNO: 40 vagas<br>Mestrado e Doutorado<br>email: secccpmae@ime.usp.br<br>fone: 11 3091-6200<br>DIURNO: 15(M) + 15(D) vagas (variável - editais anuais)]]></description>
+        <styleUrl>#icon-62</styleUrl>
+        <Point>
+          <coordinates>
+            -46.732042,-23.559542,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Unicapital/UNIESP</name>
+        <description><![CDATA[http://www.unicapital.edu.br/cursosEstatistica.asp<br>Unicapital-Centro Universitário Capital<br>Depto de Estatística<br>Rua Ibipetuba, 130 - Mooca<br>03127-180 - São Paulo - SP<br>Tel/Fax: 11-2065-1000<br>E-mail: estatistica@unicapital.edu.br<br>(Bacharelado)<br>>> CURSO SUSPENSO<br><br>MATUTINO: 50 vagas<br>NOTURNO: 150 vagas]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -46.586956,-23.574883,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>FEA-PUC-SP</name>
+        <description><![CDATA[FEA-Faculdade de Economia, Administração, Contabilidade e Atuária <br>http://www.pucsp.br/graduacao/estatistica<br>PUCSP-Pontifícia Universidade Católica de São Paulo<br>Campus Perdizes<br>Rua Monte Alegre, 984<br>Perdizes - São Paulo - SP<br>CEP: 05014-901<br>Fone: (11) 3670-8000 (PABX)<br>(Bacharelado)<br>>> INOPERANTE<br><br>NOTURNO: 50 vagas]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -46.6517516,-23.5604633,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IMECC-DE-UNICAMP</name>
+        <description><![CDATA[http://www.ime.unicamp.br/conteudo/departamento-estatistica<br>UNICAMP-Universidade de Campinas<br>IMECC-Instituto de Matemática, Estatística e Computação Científica - Depto de Estatística<br><br><br>Rua Sérgio Buarque de Holanda, 651<br>Cidade Universitária "Zeferino Vaz"<br>Distr. Barão Geraldo<br>13083-859 Campinas, SP<br>Fone: 19-3521-5921 Fax: 19-3521-6094<br>E-mail: dirimecc@ime.unicamp.br<br>(Bacharelado+Mestrado+Doutorado)<br><br><br>DIURNO: 70 vagas]]></description>
+        <styleUrl>#icon-62</styleUrl>
+        <Point>
+          <coordinates>
+            -47.067726,-22.815913,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCE-DES-UFSCAR</name>
+        <description><![CDATA[http://www.des.ufscar.br/<br>UFSCar-Universidade Federal de São Carlos<br>CCE-Centro de Ciências Exatas e Tecnológicas - Depto de Estatística<br>Via Washington Luís, km 235 - Bairro Monjolinho<br>CEP 13.565-905 - Caixa Postal 676 - São Carlos, SP<br>Fone: 16-3351-8241<br>E-mail: deschefe@ufscar.br<br>(Bacharelado e Programa Interinstitucional de Pós-Graduação em Estatística Mestrado+Doutorado Des/UFSCar+ICMC/USP)<br><br> <br>INTEGRAL: 45 vagas]]></description>
+        <styleUrl>#icon-62</styleUrl>
+        <Point>
+          <coordinates>
+            -47.884276,-21.98205,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ICMC-SME-USP/São Carlos</name>
+        <description><![CDATA[http://www.icmc.usp.br/~sme/<br>Vídeo sobre o curso: http://youtu.be/NQV4VhlQ0JY<br><br>USP-Universidade de São Paulo<br>ICMC-Instituto de Ciências Matemáticas e de Computação - Depto de Matemática Aplicada e Estatística (SME)<br>Avenida Trabalhador são-carlense, 400<br>Cx. Postal 668 - São Carlos-SP - CEP 13560-970<br>Fone: 16-3373-8121<br>Fone/fax: 16-3373-9650<br>E-mail: sme@icmc.usp.br<br>(Bacharelado e Programa Interinstitucional de Pós-Graduação em Estatística Mestrado+Doutorado Des/UFSCar+ICMC/USP)]]></description>
+        <styleUrl>#icon-62</styleUrl>
+        <Point>
+          <coordinates>
+            -47.895632,-22.004886,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ESALQ-USP</name>
+        <description><![CDATA[http://www.esalq.usp.br/departamentos/lce/<br>ESALQ-Escola Superior Agricultura Luiz de Queiroz<br>LCE-Departamento de Ciências Exatas<br>Avenida Pádua Dias, 11 - Vila Independência<br>13418-260 Piracicaba, SP<br>Fone: 19-3422-0611<br>(Mestrado+Doutorado Estatística Agronômica)]]></description>
+        <styleUrl>#icon-124</styleUrl>
+        <Point>
+          <coordinates>
+            -47.633286,-22.709135,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>FCT-DEST-UNESP/Presidente Prudente</name>
+        <description><![CDATA[http://www.fct.unesp.br/#!/departamentos/estatistica/<br>UNESP-Universidade Estadual Paulista “Júlio de Mesquita Filho” <br>FCT–Faculdade de Ciências e Tecnologia<br>Departamento de Estatística (DEST)<br>Rua Roberto Simonsen, 305<br>19.060-900 Presidente Prudente, SP<br>Fone: 18-3229-5385 ou ramal 5560 <br>E-mail: estatistica@fct.unesp.br<br>(Bacharelado+Mestrado)<br><br><br>DIURNO: 30 vagas]]></description>
+        <styleUrl>#icon-102</styleUrl>
+        <Point>
+          <coordinates>
+            -51.409739,-22.123368,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IBILCE-DCCE-UNESP (SJRPreto)</name>
+        <description><![CDATA[http://www.dcce.ibilce.unesp.br/<br>UNESP-Universidade EStadual Paulista<br>IBILCE-Instituto de Biociências, Letras e Ciências Exatas<br>Departamento de Ciências de Computação e Estatística (DCCE)<br>Fones: 17-3221-2201/2202 <br>Fax: 17-3221-2203<br>Rua Cristóvão Colombo, 2265 - Jardim Nazareth<br>15054-000 São José do Rio Preto, SP<br>(Pesquisa/Serviço)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -49.358954,-20.786088,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IBB-DB-UNESP/Botucatu</name>
+        <description><![CDATA[http://www.ibb.unesp.br/departamentos/Bioestatistica/bioestatistica.php<br>Instituto de Biociências de Botucatu - Depto de Bioestatística<br>UNESP - Campus de Botucatu<br>Distrito de Rubião Júnior, S/N<br>CEP 18618-970 - Botucatu / SP, Brazil<br>Fone: 14- 3811-6097 ou 3811-6272<br>CAIXA POSTAL: 510<br>E-mail: bioestatistica@ibb.unesp.br<br>(Pesquisa/Pós//Serviço-Bioestatística e Biometria)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -48.494377,-22.892035,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IE-EST-UnB</name>
+        <description><![CDATA[http://www.est.unb.br/<br>UnB-Universidade de Brasilia<br>IE-Instituto de Ciências Exatas - Depto de Estatística<br>Campus Universitário Darcy Ribeiro - Asa Norte<br>70910-900 - Brasilia, DF<br>Fone: 61-3107-6637/6738/6739<br>Fax: 61-3107 6768<br>E-mail: est@unb.br<br>(Bacharelado+Mestrado)<br><br><br>DIURNO: 80 vagas (40/semestre)]]></description>
+        <styleUrl>#icon-102</styleUrl>
+        <Point>
+          <coordinates>
+            -47.869706,-15.763314,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ICET-EST-UFMT</name>
+        <description><![CDATA[http://www.ufmt.br/icet/icet.html<br>UFMT-Universidade Federal de Mato Grosso<br>ICET-Instituto de Ciências Exatas e da Terra - Depto de Estatística<br>Avenida Fernando Correa, s/n, Coxipó<br>Fone: 65-3615-8700/8701/8702<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -56.064965,-15.608261,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IME-Estatística-UFG</name>
+        <description><![CDATA[http://www.mat.ufg.br/page.php?site_id=28<br>UFG-Universidade Federal de Goiás<br>IME-Instituto de Matemática e Estatistica - Depto de Estatística<br>Campus Samambaia, CP 131 <br>74001-970 - Goiânia, GO<br>Fone: 62-3521-1208 - FAX: 62-3521-1180<br>E-mail: secmat@mat.ufg.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -49.262465,-16.603679,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ICEx-DE-UFMG</name>
+        <description><![CDATA[http://www.est.ufmg.br/portal/<br>UFMG-Universidade Federal de Minas Gerais<br>ICEx-Instituto de Ciências Exatas - Depto de Estatística<br>Av. Antônio Carlos 6627 - Prédio do ICEx - sala 4054 - Pampulha <br>31270-901  Belo Horizonte, MG<br>Fone: 31-3409-5920 Fax: 31-3409-5924<br>(Bacharelado+Mestrado+Doutorado)]]></description>
+        <styleUrl>#icon-62</styleUrl>
+        <Point>
+          <coordinates>
+            -43.962029,-19.868544,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ICE-DE-UFJF</name>
+        <description><![CDATA[http://www.ufjf.br/estatistica/<br>UFJF-Universidade Federal de Juiz de Fora<br><br><br>ICE-Instituto de Ciências Exatas - Depto de Estatística<br>Bloco 304, Sala 3401 - Campus UFJF<br>Fone: 32-2102-3306/3320<br>E-mail: coord.estatistica@gmail.com<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -43.371803,-21.776279,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ICEB-DEEST-UFOP</name>
+        <description><![CDATA[www.iceb.ufop.br/deest (http://www.iceb.ufop.br/deest)<br>UFOP-Universidade Federal de Ouro Preto<br>ICEB-Instituto de Ciências Exatas e Biológicas<br>Morro do Cruzeiro<br>35400-000, Ouro Preto, MG<br>Fone: 31-3559.1312                     <br>E-mail: coest@iceb.ufop.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -43.510355,-20.395661,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>FAMAT-Estatística-UFU</name>
+        <description><![CDATA[http://www.famat.ufu.br/graduacao/estatistica<br>UFU-Universidade Federal de Uberlândia<br>FAMAT-Faculdade de Matemática<br>Campus Santa Mônica - Bloco 1F - Sala 1F154<br>Av. João Naves de Avila - 2121 - CP 593<br>Uberlândia - MG - CEP 38.408-100<br>Fone: 34-3239-4209<br>Fax: 34-3239-4126<br>E-mail: cocest@famat.ufu.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -48.258267,-18.918892,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DEX-UFLA</name>
+        <description><![CDATA[http://www.dex.ufla.br<br>UFLA-Universidade Federal de Lavras<br>DEX-Departamento de Ciências Exatas<br>Campus da UFLA - Caixa Postal 3037 <br>37200-000 - Lavras, MG<br>Fone: 35-3829-1961 Fax: 35-3829-1961<br>(Mestrado+Doutorado Estatística e Experimentação Agropecuária)]]></description>
+        <styleUrl>#icon-124</styleUrl>
+        <Point>
+          <coordinates>
+            -44.978585,-21.226937,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCE-DET-UFV</name>
+        <description><![CDATA[http://www.det.ufv.br/<br>UFV-Universidade Federal de Viçosa<br>CCE-Centro de Ciências Exatas e Tecnológicas<br>Departamento de Estatística<br>Av. P. H. Rolfs s/n, Campus Universitário <br>36570-000 Viçosa, MG<br>Fone: 31-3899-2398 <br>Fax: 31-3899-3880<br>E-mail: det@ufv.br<br>(Mestrado e Doutorado Estatística Aplicada e Biometria)]]></description>
+        <styleUrl>#icon-124</styleUrl>
+        <Point>
+          <coordinates>
+            -42.868025,-20.764285,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DEMAT-UFSJ</name>
+        <description><![CDATA[http://www.ufsj.edu.br/demat/<br>UFSJ-Univsersidade Federal de São João Del Rei<br>DEMAT-Departmento de Matemática, Estatística e Ciência da Computação<br>Praça Frei Orlando, 170<br>36.307-352 São João Del Rei, MG<br>Fone: 32-3379.2356<br>E-mail: demat@ufsj.edu.br<br>(sem bacharelado)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -43.308105,-18.500447,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ICE-UNIFAL</name>
+        <description><![CDATA[https://www.unifal-mg.edu.br/ppgeab/<br><br>UNIFAL - Universidade Federal de Alfenas<br>ICE - Instituto de Ciências Exatas<br>Secretaria do Programa de Pós-graduação em Estatística Aplicada e Biometria<br>Rua Gabriel Monteiro da Silva, 700, Sala O-314 - centro<br>37.130-000 Alfenas MG<br>Fone: (35) 3299-1392 / (35) 3299-1483 (coordenação)<br>E-mail: ppgeab@unifal-mg.edu.br<br>(Mestrado em Estatística Aplicada e Biometria)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -45.948021,-21.420907,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IM-DME-UFRJ</name>
+        <description><![CDATA[http://www.im.ufrj.br/estatistica/<br>UFRJ-Universidade Federal do Rio de Janeiro<br>IM-Instituto de Matemática, Depto de Métodos Estatísticos (DME)<br>Secretaria de Graduação:<br>Sala C103 do Bloco C do CT, IM-UFRJ<br>Caixa Postal 68530<br>21941-909 Rio de Janeiro, RJ<br>Fone: 21-2562-7396<br>E-mail Coordenação: coord.estatistica@im.ufrj.br<br>(Bacharelado+Mestrado+Doutorado)]]></description>
+        <styleUrl>#icon-62</styleUrl>
+        <Point>
+          <coordinates>
+            -43.229463,-22.860161,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ENCE-RJ</name>
+        <description><![CDATA[http://www.ence.ibge.gov.br/<br>ENCE-Escola Nacional de Ciências Estatísticas<br>Rua André Cavalcanti, 106<br>Bairro de Santa Tereza <br>20231-050 - Rio de Janeiro, RJ <br>Fone: 21-2142.4677<br>Fax: 21-2142.0501<br>E-mail: ence@ibge.gov.br<br>(Bacharelado)(Mestrado em Estatística Social)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -43.186207,-22.916841,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCET-DME-UNIRIO</name>
+        <description><![CDATA[http://www.uniriotec.br/~dme/index.htm<br>UNIRIO-Universidade Federal do Estado do Rio de Janeiro<br>CCET-Centro de Ciências Exatas e Tecnologia<br>DME-Departamento de Matemática e Estatística<br>Avenida Pasteur, 458 - Urca<br>Campus da Urca - Prédio do CCET - 5º andar<br>22290-240 Rio de Janeiro, RJ<br>Fone/Fax: 21-2244.5613/5614 - ramal 26<br>(Serviço/Pesquisa)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -43.168183,-22.954637,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IME-DE-UERJ</name>
+        <description><![CDATA[http://www.ime.uerj.br/cake/graduacao/bacharelado-em-estatistica/<br>UERJ-Universidade Estadual do Rio de Janeiro<br><br>IME-Instituto de Matemática e Estatística - Depto de Estatística<br><br><br>Rua São Francisco Xavier, 524 - Pavilhão Reitor João Lyra Filho<br>6º andar Diretoria - Sala 6019 -Bloco B <br>20559-900 Rio de Janeiro, RJ<br>Tel/Fax: 21-2334-0144<br>E-mail: secime@ime.uerj.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -43.236147,-22.91147,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IME-DE-UFF</name>
+        <description><![CDATA[www.prograd.uff.br/estatistica (http://www.prograd.uff.br/estatistica)<br>UFF-Universidade Federal Fluminense<br>IME-Instituto de Matemática e Estatística - Depto de Estatística<br>Rua Mário Santos Braga s/n <br>Instituto de Matemática e Estatística - 2º andar <br>Campus do Valonguinho - Centro<br>24020-140 Niterói - RJ<br>Fone: 21-2629 2099<br>E-mail: secretaria@est.uff.br<br>(Bacharelado)<br><br><br>INTEGRAL: 86 vagas (43/semestre)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -43.125298,-22.896501,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IMPA-RJ</name>
+        <description><![CDATA[http://www.impa.br/<br>IMPA-Instituto Nacional de Matemática Pura e Aplicada<br>Estrada Dona Castorina, 110<br>Jardim Botânico<br>22460-320 Rio de Janeiro, RJ<br>Fone: 21-2529-5000 <br>Fax: 21-2512-4115<br>E-mail: dac@impa.br<br>(Mestrado/Doutorado-Probabilidade)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -43.237655,-22.965289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ICE-DM-UFRRJ</name>
+        <description><![CDATA[http://www.ice.ufrrj.br/#<br>UFRRJ-Universidade Federal Rural do Rio de Janeiro<br>ICE-Instituto de Ciências Exatas - Depto de Matemática<br>Pavilhão Roberto Alvahydo<br>Km 7, Rodovia BR 465<br>23890-000 Seropédica - RJ<br>Fone: 21-2682-1872<br>E-mail: ice@ufrrj.br<br>(Serviço)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -43.68634,-22.764835,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ENSP-FIOCRUZ</name>
+        <description><![CDATA[http://www.ensp.fiocruz.br/portal-ensp/pos-graduacao/site/?site=3<br>ENSP - ESCOLA NACIONAL DE SAÚDE PÚBLICA SERGIO AROUCA<br>Pós-Graduação em epidemiologia em saúde pública<br>Rua Leopoldo Bulhões, 1480 - Manguinhos <br>21041-210 - Rio de Janeiro RJ <br>Fones: (21) 2598-2557, 2598-2558, 2598-2730 e 0800-230085<br>E-mail: secaepidemiologia@ensp.fiocruz.br <br>(Mestrado+Doutorado em Epidemiologia em Saúde Pública)]]></description>
+        <styleUrl>#icon-124</styleUrl>
+        <Point>
+          <coordinates>
+            -43.250808,-22.878553,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCE-Estatística-UFES</name>
+        <description><![CDATA[http://www.cce.ufes.br/<br>UFES-Universidade Federal do Espírito Santo<br>CCE-Centro de Ciências Exatas<br>Av. Fernando Ferrari, 514, Goiabeiras<br>Campus Universitário Alaor de Queiroz Araújo<br>29075-910, Goiabeiras, Vitória ES.<br>Fone: 27-3335-2828<br>Fax: 27-3335-2460<br>E-mail: destat@cce.ufes.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -40.304675,-20.275442,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>SCE-DEST-UFPR</name>
+        <description><![CDATA[http://www.est.ufpr.br/<br>UFPR-Universidade Federal do Paraná<br>SCE-Setor de Ciências Exatas - Depto de Estatística<br>Edifício da Administração - 3º andar - Centro Politécnico<br>Jardim das Américas<br>81.531-990 Curitiba, PR<br>Fone/Fax: 41-3361-3141<br>Caixa Postal: 19.081<br>E-mail geral: dest@ufpr.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -49.23377,-25.451267,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCE-DES-UEM</name>
+        <description><![CDATA[http://www.des.uem.br<br>UEM-Universidade Estadual de Maringá<br>CCE-Centro de Ciências Exatas - Depto de Estatística (DES)<br>Av. Colombo 5790 Bloco F67<br>87020-900 Maringá, PR<br>Fone: 44-3044-4338<br>(Bacharelado e Mestrado em Bioestatísitca)]]></description>
+        <styleUrl>#icon-102</styleUrl>
+        <Point>
+          <coordinates>
+            -51.938317,-23.404522,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCE-DE-UEL</name>
+        <description><![CDATA[http://www.uel.br/cce/dsta/<br>UEL-Universidade Estadual de Londrina<br>CCE-Centro de Ciências Exatas, Depto de Estatística <br>Rodovia Celso Garcia Cid - Pr 445 Km 380<br>Campus Universitário<br>86051-990 Londrina, PR  <br>Fone/Fax: 43-3371-4346<br>E-mail: dsta@uel.br<br>(Pesquisa/Serviço)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -51.201729,-23.326444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CTC-INE-UFSC</name>
+        <description><![CDATA[http://www.inf.ufsc.br/<br>UFSC-Universidade Federal de Santa Catarina<br>CTC-Centro Tecnológico - Depto de Informática e Estatística (INE)<br>88040-900 - Campus Universitário Cx.P. 476<br>Florianópolis, SC<br>Fone: 48-3721-9498<br>Fax: 48-3721-7553<br>(Pesquisa)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -48.51864,-27.600746,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IM-DE-UFRGS</name>
+        <description><![CDATA[http://www.ufrgs.br/mat/organizacao/departamentos/departamento-de-estatistica-dest<br>Departamento de Estatística - UFRGS<br>UFRGS-Universidade Federal do Rio Grande do Sul<br>IM-Instituto de Matemática, Depto de Estatística<br>Av. Bento Gonçalves, 9500 - Prédio 43-111 - Agronomia<br>Caixa Postal 15080<br>91509-900 Porto Alegre, RS<br>Fone: 51-3308-6193/6225<br>E-mail: dest@mat.ufrgs.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -51.121155,-30.068834,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>FAMAT-DE-PUCRS</name>
+        <description><![CDATA[http://www.pucrs.br/uni/poa/famat/destat/index.htm<br>PUCRS-Pontifícia Universidade Católica do Rio Grande do Sul<br>FAMAT-Faculdade de Matemática, Depto de Estatística<br>Av. Ipiranga 6681<br>Prédio 30 - Bloco C - Sala 104<br>90619-900 Porto Alegre, RS<br>Fone: 51-3320.3531<br>Fax: 51-3320.3631<br>(Serviço/Pesquisa)(Privada)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -51.174257,-30.059042,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCNE-DEST-UFSM</name>
+        <description><![CDATA[http://www.ufsm.br/estat/<br>UFSM-Universidade Federal de Santa Maria<br>CCNE-Centro de Ciências Naturais e Exatas, Depto de Estatística (DEST)<br>Cidade Universitária<br>Camobi, km9, Prédio 13, Sala 1209 E, Campus UFSM<br>97105-900 Santa Maria, RS<br>Fone: 55-3220-8612<br>E-mail: ccne13@gmail.com<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -53.716578,-29.714818,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IMEF-DE-FURG</name>
+        <description><![CDATA[http://www.imef.furg.br/<br>FURG-Universidade Federal do Rio Grande<br>IMEF-Instituto de Matemática, Estatística e Física, Depto de Estatística<br>Campus Carreiros, Av. Itália km 8<br>Caixa Postal 474<br>96201-900, Rio Grande, RS<br>Fones: 53-3233-6796  <br>Fax: 53-3233-6500 <br>E-mail:  imef@furg.br <br>(Pesquisa/Serviço)]]></description>
+        <styleUrl>#icon-158</styleUrl>
+        <Point>
+          <coordinates>
+            -52.167072,-32.073922,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IFM-DME-UFPEL</name>
+        <description><![CDATA[http://ifm.ufpel.edu.br/dme/<br>UFPEL-Universidade Federal de Pelotas<br>IFM-Instituto de Física e Matemática, Depto de Matemática e Estatística (DME)<br>Campus Universitário Capão do Leão, s/nº<br>Fone/Fax: 53-3275-7346/7343<br>Correspondência:<br>Rua Gomes Carneiro, 1 - Centro<br>96010-610 Pelotas, RS<br>Caixa Postal 354 <br>6001-970 Pelotas, RS<br>Fone: 53-3921-1401<br>FAX: 53-3921-1268<br>(Pesquisa; Serviço; Mestrado+Doutorado em Epidemiologia)]]></description>
+        <styleUrl>#icon-124</styleUrl>
+        <Point>
+          <coordinates>
+            -52.417917,-31.801725,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ICEN-FAEST-UFPA</name>
+        <description><![CDATA[http://faest.icen.ufpa.br/<br>UFPA-Universidade Federal do Pará<br>ICEN-Instituto de Ciências Exatas e Naturais, Faculdade de Estatística (FAEST)<br>Campus Universitário do Guamá<br>Rua Augusto Corrêa, nº 1<br>Instituto de Ciências Exatas e Naturais - Campus Básico<br>66075-110 Belém, PA<br>Fones: 91-3201-7413/8053<br>(Bacharelado+Mestrado)]]></description>
+        <styleUrl>#icon-102</styleUrl>
+        <Point>
+          <coordinates>
+            -48.456203,-1.474505,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DE-Depto de Estatística-UFAM</name>
+        <description><![CDATA[http://www.icede.ufam.edu.br/<br>UFAM-Universidade Federal do Amazonas<br>ICE-Instituto de Ciências Exatas<br>DE - Departamento de Estatística<br>Av. Gal. Rodrigo Octávio Jordão Ramos, 6200<br>Campus Universitário Senador Arthur Virgílio Filho, Setor Norte, Coroado I<br>69.077-000 Manaus AM<br>Fone: 92-3305-2828<br>E-mail: icesecretaria@ufam.edu.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -59.963787,-3.088558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>NCT-Estatística-UNIR</name>
+        <description><![CDATA[http://www.dmejp.unir.br/<br>http://www.unir.br/index.php?pag=jiparana<br>UNIR-Universidade Federal de Rondônia<br>NCT-Núcleo de Ciência e Teconlogia<br>Campus JI-PARANÁ<br>Rua Rio Amazonas, 351, Bairro Jardim dos Migrantes<br>76900-000 Ji-Paraná, RO<br>NCT-SECRETÁRIA: 69-2182-2127<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -61.968486,-10.881886,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CC-DEMA-UFC</name>
+        <description><![CDATA[https://sites.google.com/a/dema.ufc.br/estatistica/<br>UFC-Universidade Federal do Ceará<br>CC-Centro de Ciências, Depto de Estatística e Matemática Aplicada (DEMA)<br><br>Campus do Pici,  Bloco 910  Bairro: Pici <br>CEP: 60455-760   Fortaleza - Ceará - Brasil<br>Fone: +55 85 3366-9793   Fax: +55 85 3366-9836<br>E-mail: dema@ufc.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -38.5742,-3.745968,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCEN-Estatística-UFPB</name>
+        <description><![CDATA[http://www.de.ufpb.br/<br>UFPB-Universidade Federal da Paraíba<br>CCEN-Centro de Ciências Exatas e da Natureza, Depto de Estatística <br>Cidade Universitária s/n <br>58.051-900 João Pessoa, PB<br>Fones: 83-3216-7075 Fax: 83-3216-7117<br>E-mail Secretária: amanda@de.ufpb<br>(Bacharelado)<br><br><br>DIURNO: 40 vagas]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -34.844642,-7.138713,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCT-DE-UEPB</name>
+        <description><![CDATA[http://www.uepb.edu.br/centro-de-ciencias-e-tecnologia-cct/ (http://www.uepb.edu.br/index.php?option=com_content&view=article&id=116&Itemid=148)<br>UEPB-Universidade Estadual da Paraíba<br>CCT-Centro de Ciências e Tecnologia, Depto de Estatística (DE)<br>Rua Baraúnas, 351 - Bairro Universitário  - CEP 58429-500 - Campina Grande - PB<br>Fone: 83-3315-3459<br>E-mail Coordenador: gesteves@uepb.edu.br<br>(Bacharelado)<br><br>Matutino: 32/semestre<br>Noturno: 32/semestre]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -35.915835,-7.209464,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCT-DME-UFCG</name>
+        <description><![CDATA[www.dme.ufcg.edu.br (http://www.dme.ufcg.edu.br/)<br>http://www.dme.ufcg.edu.br/cgestat/index.html<br>UFCG-Universidade Federal de Campina Grande<br>CCT-Centro de Ciências e Tecnologia<br>Depto de Estatística<br>Av. Aprígio Veloso, 882 - Bloco CX, Bodocongó, Caixa Postal: 10.044<br>58.109-970 - Campina Grande, PB<br>Fone/Fax: 83-3310-1728<br>E-mail: cgestat@dme.ufcg.edu.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -35.910653,-7.217053,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCET-Estatística-UFRN</name>
+        <description><![CDATA[http://www.estatistica.ccet.ufrn.br/ <br>UFRN-Universidade Federal do Rio Grande do Norte<br>CCET-Centro de Ciências Exatas e da Terra, Depto de Estatística<br>Avenida Senador Salgado Filho, 3000<br>59078-970 - Campus Universitário - Lagoa Nova - Natal/RN<br>Fone: 84-3215-3787 Fax: 84-3215-3685<br>E-mail: dest@ccet.ufrn.br<br>(Bacharelado+Mestrado)]]></description>
+        <styleUrl>#icon-102</styleUrl>
+        <Point>
+          <coordinates>
+            -35.198554,-5.841127,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCEN-DE-UFPE</name>
+        <description><![CDATA[http://www.de.ufpe.br/<br>UFPE-Universidade Federal de Pernambuco<br>CCEN-Centro de Ciências Exatas e da Natureza, Depto de Estatística (DE)<br>Cidade Universitária<br>50740-540 Recife, PE<br>Fone/Fax: (81) 2126-8420<br>E-mail: geral@de.ufpe.br<br>(Bacharelado+Mestrado+Doutorado)]]></description>
+        <styleUrl>#icon-62</styleUrl>
+        <Point>
+          <coordinates>
+            -34.951694,-8.05651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DEINFO-UFRPE</name>
+        <description><![CDATA[http://www.deinfo.ufrpe.br/  (HTTP://www.deinfo.ufrpe.br/)<br>http://www.pgbiom.ufrpe.br/ (Programa de pós)<br>UFRPE-Universidade Federal Rural de Pernambuco<br>Depto de Estatística e Informática (DEINFO)<br>Programa de Pós-Graduação em Biometria e Estatística Aplicada<br>Av. D. Manoel de Medeiros, S/Nº<br>52.171-900 - Dois Irmãos Recife, PE<br>Fone/Fax: 81-3320-6490<br>E-mail: coordenacao@pgbiom.ufrpe.br<br>(Mestrado+Doutorado Biometria)]]></description>
+        <styleUrl>#icon-124</styleUrl>
+        <Point>
+          <coordinates>
+            -34.949779,-8.015902,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ESEB-BA</name>
+        <description><![CDATA[Escola Superior de Estatística da Bahia<br>Rua Arquimedes Gonçalves, 32 - Nazaré<br>Salvador - BA, 40050-300<br>Fones: 71-3321-1906/1881, 3329-6562<br>(Bacharelado)<br><br>DESCREDENCIADO EM 2014]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -38.507093,-12.979188,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>IM-DE-UFBA</name>
+        <description><![CDATA[http://www.est.ufba.br/<br>UFBA-Universidade Federal da Bahia<br>IM-Instituto de Matemática, Depto de Estatística (DE)<br>Av. Adhemar de Barros, s/n - Campus de Ondina<br>40.170-110 - Salvador - Bahia<br>Fone: Secretaria (CEAG): 71-3283.6336/6340/6341<br>Chefia: 71-3283.6262<br>E-mail: mat04@ufba.br]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -38.507351,-13.001171,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCET-DE-UFS</name>
+        <description><![CDATA[www.ufs.br<br>UFS-Universidade Federal de Sergipe<br>CCET-Centro de Ciências Exatas e Tecnologia, Depto de Estatística<br>Avenida Marechal Rondon, s/n, Jardim Rosa Elze<br>49100-000 São Cristóvão, SE<br>Fone: 79-2105-6408 Fax:	79-2105-6474<br>E-mail:	gabinete@ufs.br<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -37.10113,-10.922878,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CCN-DIE-UFPI</name>
+        <description><![CDATA[http://www.ufpi.br/ccn/cursos.php?cid=17<br>UFPI-Universidade Federal do Piauí<br>CCN-Centro de Ciências da Natureza<br>Chefia do Curso de Bacharelado em Estatística <br>Campus Ministro Petrônio Portella - Bairro Ininga<br>64049-550 Teresina, PI<br>Fone: 86-3215-1180<br>E-mail Chefia: lya.raq@gmail.com<br>(Bacharelado)]]></description>
+        <styleUrl>#icon-24</styleUrl>
+        <Point>
+          <coordinates>
+            -42.790504,-5.057911,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
