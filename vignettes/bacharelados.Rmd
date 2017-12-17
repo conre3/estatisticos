@@ -1,0 +1,31 @@
+---
+title: "Bacharelados"
+author: "J"
+date: "December 16, 2017"
+output: html_document
+---
+
+# Universidades
+
+Esse documento contém informações de todos os cursos de bacharelado em estatística na jurisdição do CONRE-3.
+
+
+
+```{r}
+library(tidyverse)
+re_conre3 <- regex(
+  "SP|São Paulo|Sao Paulo|PR|Paraná|Parana|Mato Grosso|MT|MS", 
+  ignore_case = TRUE)
+kml <- sf::st_read("../data-raw/faculdades.kml", quiet = TRUE) %>% 
+  as_tibble() %>% 
+  janitor::clean_names() %>% 
+  mutate_if(is.factor, as.character) %>% 
+  select(name, description, geometry) %>% 
+  mutate(desc = str_split(description, "<br>")) %>% 
+  unnest(desc) %>% 
+  filter(str_detect(desc, re_conre3))
+
+kml %>% 
+  glimpse
+```
+
