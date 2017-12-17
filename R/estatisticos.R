@@ -53,7 +53,8 @@ primeiro_ultimo <- Vectorize(FUN = function(nm) {
 
 #' @export
 pega_nomes_cea <- function(l) {
-  h <- rvest::html(httr::GET(l), encoding = 'UTF-8')
+  # message(l)
+  h <- xml2::read_html(httr::GET(l))
   x <- rvest::html_text(h)
   x <- gsub('[\n\r ]+', ' ', x)
   x <- abjutils::rm_accent(x)
@@ -63,17 +64,17 @@ pega_nomes_cea <- function(l) {
   x <- stringr::str_split(x, ',|;| e ')
   x <- sapply(x, function(y) y[-1])
   x <- stringr::str_trim(unlist(x))
-  return(unique(x))
+  unique(x)
 }
 
 #' @export
 pega_cea <- function() {
   base <- 'http://www.ime.usp.br/~cea'
-  h <- rvest::html(httr::GET(sprintf('%s/menusotao.html', base)))
+  h <- xml2::read_html(httr::GET(sprintf('%s/menusotao.html', base)))
   nodes <- rvest::html_nodes(h, xpath = '//select[@name="menusotao"]//option')
   links <- sprintf('%s/%s', base, rvest::html_attr(nodes, 'value'))
   d <- dplyr::data_frame(link = links)
-  d <- dplyr::distinct(d, link)
+  d <- dplyr::distinct(d, link, .keep_all = TRUE)
   d <- dplyr::group_by(d, link)
   d <- dplyr::do(d, nome = pega_nomes_cea(.$link))
   d <- dplyr::ungroup(d)
@@ -88,7 +89,7 @@ pega_cea <- function() {
                      ano = paste0(ifelse(as.numeric(ano) > 20, '19', '20'), ano))
   d <- dplyr::arrange(d, desc(ano))
   d <- dplyr::select(d, -link)
-  d <- dplyr::distinct(d, nome)
+  d <- dplyr::distinct(d, nome, .keep_all = TRUE)
   d <- dplyr::arrange(d, nome)
   d <- dplyr::rename(d, nome_cea = nome)
   dplyr::tbl_df(d)
@@ -114,7 +115,7 @@ get_google <- function(nomes, path) {
   a <- system.file('python/pyg.py', package = 'estatisticos')
   rPython::python.load(a)
   d <- dplyr::data_frame(nome = nomes)
-  d <- dplyr::distinct(d, nome)
+  d <- dplyr::distinct(d, nome, .keep_all = TRUE)
   d <- dplyr::group_by(d, nome)
   d <- dplyr::do(d, get_google_um(.$nome, path))
   d <- dplyr::ungroup(d)
