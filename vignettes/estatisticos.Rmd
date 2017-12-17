@@ -111,17 +111,16 @@ sai <- c('ADRIANA ELAINE DA SILVA',
          'EDILENE FREIRE N GOMES',
          'SERGIO R MARTINS',
          'PAULO TMS DE OLIVEIRA')
-
-
 ```
 
-### Formandos por ano e proporçao desses formandos que se cadastraram no Conre
+### Formandos por ano e proporção desses formandos que se cadastraram no Conre
 
 ```{r fig.width=8, fig.height=4, echo=FALSE}
-prop_ano_cea <- nomes_cea %>%
+prop_ano_cea <- pega_cea() %>%
   mutate(fl = ifelse(str_detect(fl, 'VICTOR VERZANI'), 'VICTOR SOUZA', fl)) %>%
+  mutate(fl = as.character(fl)) %>% 
   filter(!nome_cea %in% errados, !nome_cea %in% sai, !nome_cea %in% profs) %>%
-  left_join(nomes, 'fl') %>%
+  left_join(mutate(nomes, fl = as.character(fl)), 'fl') %>%
   group_by(ano) %>%
   summarise(n_formados = n(), n_conre = sum(!is.na(nome))) %>%
   arrange(desc(ano)) %>%
@@ -134,8 +133,8 @@ prop_ano_cea %>%
   ggplot(aes(x = ano, y = porc)) +
   geom_line() +
   geom_point(size = 5, alpha = .4) +
-  theme_bw() +
-  ggtitle('Proporçao de alunos formados do IME que \nse cadastram no Conre-3 por ano de formatura') +
+  theme_minimal() +
+  ggtitle('Proporção de alunos formados do IME que \nse cadastram no Conre-3 por ano de formatura') +
   scale_y_continuous(labels = scales::percent) +
   scale_x_continuous(breaks = 1900:2050) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
